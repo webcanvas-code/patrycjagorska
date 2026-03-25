@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakt · Konsultacje Rodzinne Gdańsk</title>
+    <meta name="description"
+        content="Skontaktuj się z gabinetem konsultacji rodzinnych w Gdańsku. Tel/WhatsApp: 886-847-122. Adres: ul. Łódzka 64/43, Gdańsk.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:ital,wght@0,600;1,400&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            font-family: 'DM Sans', sans-serif;
+        }
+
+        .font-serif {
+            font-family: 'Playfair Display', serif;
+        }
+
+        .fab-hidden {
+            opacity: 0;
+            pointer-events: none;
+            transform: translateY(16px);
+        }
+
+        .fab-visible {
+            opacity: 1;
+            pointer-events: auto;
+            transform: translateY(0);
+        }
+
+        /* Pulsing ring on notice card */
+        @keyframes pulse-ring {
+            0% {
+                box-shadow: 0 0 0 0 rgba(196, 135, 90, 0.25);
+            }
+
+            70% {
+                box-shadow: 0 0 0 12px rgba(196, 135, 90, 0);
+            }
+
+            100% {
+                box-shadow: 0 0 0 0 rgba(196, 135, 90, 0);
+            }
+        }
+
+        .notice-pulse {
+            animation: pulse-ring 2.4s ease-out infinite;
+        }
+    </style>
+</head>
+
+<body
+    class="bg-white text-gray-800 antialiased selection:bg-[#7A9E7E]/20 selection:text-[#7A9E7E] flex flex-col min-h-screen">
+
+    <!-- Navigation -->
+    <header class="w-full sticky top-0 z-50 bg-[#F7F3EE]/90 backdrop-blur-md py-4 px-6 lg:px-12 border-b border-[#7A9E7E]/10 shadow-[0_4px_30px_rgb(0,0,0,0.03)] transition-all duration-300">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <a href="index.html" class="flex items-center transition-transform hover:scale-105">
+                <img src="logo.svg" alt="Konsultacje Rodzinne Gdańsk" class="h-16 w-auto object-contain">
+            </a>
+            <nav class="hidden md:flex gap-8 items-center text-sm font-medium text-gray-600">
+                <a href="index.html#o-mnie" class="hover:text-[#7A9E7E] transition-colors">O mnie</a>
+                <div class="relative" id="nav-oferta">
+                    <button class="flex items-center gap-1 hover:text-[#7A9E7E] transition-colors focus:outline-none"
+                        aria-expanded="false" onclick="toggleMegaMenu()">
+                        Oferta
+                        <iconify-icon icon="solar:alt-arrow-down-linear" stroke-width="2"
+                            class="text-sm transition-transform duration-200" id="mega-caret"></iconify-icon>
+                    </button>
+                    <div id="mega-menu"
+                        class="absolute top-full right-[-40px] mt-4 w-[560px] lg:w-[640px] bg-white/95 backdrop-blur-md rounded-3xl shadow-[0_20px_60px_rgb(0,0,0,0.1)] border border-gray-100 p-6 hidden z-50">
+                        <div class="absolute -top-2 right-[60px] w-4 h-4 bg-white rotate-45 border-l border-t border-gray-100 rounded-sm"></div>
+                        <p class="text-xs font-semibold text-gray-400 uppercase tracking-widest mb-4">Wybierz formę wsparcia</p>
+                        <div class="grid grid-cols-2 gap-3 mb-4">
+                            <a href="terapia-indywidualna.html" class="group flex items-start gap-4 p-4 rounded-2xl hover:bg-[#F7F3EE] transition-colors">
+                                <div class="w-10 h-10 rounded-xl bg-[#7A9E7E]/10 flex items-center justify-center text-[#7A9E7E] shrink-0 group-hover:bg-[#7A9E7E]/20 transition-colors"><iconify-icon icon="solar:user-linear" stroke-width="1.5" class="text-xl"></iconify-icon></div>
+                                <div><div class="font-semibold text-gray-800 text-sm">Terapia Indywidualna</div><div class="text-xs text-gray-500 mt-0.5">Dla dorosłych &middot; 50 min &middot; 180 zł</div></div>
+                            </a>
+                            <a href="terapia-par.html" class="group flex items-start gap-4 p-4 rounded-2xl hover:bg-[#F7F3EE] transition-colors">
+                                <div class="w-10 h-10 rounded-xl bg-[#7A9E7E]/10 flex items-center justify-center text-[#7A9E7E] shrink-0 group-hover:bg-[#7A9E7E]/20 transition-colors"><iconify-icon icon="solar:hand-shake-linear" stroke-width="1.5" class="text-xl"></iconify-icon></div>
+                                <div><div class="font-semibold text-gray-800 text-sm">Terapia Par</div><div class="text-xs text-gray-500 mt-0.5">Małżeństwa &middot; 80 min &middot; 220 zł</div></div>
+                            </a>
+                            <a href="wsparcie-rodzin.html" class="group flex items-start gap-4 p-4 rounded-2xl hover:bg-[#F7F3EE] transition-colors">
+                                <div class="w-10 h-10 rounded-xl bg-[#7A9E7E]/10 flex items-center justify-center text-[#7A9E7E] shrink-0 group-hover:bg-[#7A9E7E]/20 transition-colors"><iconify-icon icon="solar:users-group-two-rounded-linear" stroke-width="1.5" class="text-xl"></iconify-icon></div>
+                                <div><div class="font-semibold text-gray-800 text-sm">Wsparcie dla Rodzin</div><div class="text-xs text-gray-500 mt-0.5">Rodziny &middot; 90 min &middot; 250 zł</div></div>
+                            </a>
+                            <a href="terapia-mlodziezy.html" class="group flex items-start gap-4 p-4 rounded-2xl hover:bg-[#F7F3EE] transition-colors">
+                                <div class="w-10 h-10 rounded-xl bg-[#7A9E7E]/10 flex items-center justify-center text-[#7A9E7E] shrink-0 group-hover:bg-[#7A9E7E]/20 transition-colors"><iconify-icon icon="solar:backpack-linear" stroke-width="1.5" class="text-xl"></iconify-icon></div>
+                                <div><div class="font-semibold text-gray-800 text-sm">Terapia Młodzieży</div><div class="text-xs text-gray-500 mt-0.5">15+ lat &middot; 50 min</div></div>
+                            </a>
+                        </div>
+                        <div class="border-t border-gray-100 pt-4">
+                            <a href="oferta.html" class="inline-flex items-center gap-1.5 text-xs font-semibold text-[#7A9E7E] hover:text-[#5d8063] transition-colors">
+                                Zobacz całą ofertę <iconify-icon icon="solar:arrow-right-linear" stroke-width="2"></iconify-icon>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <a href="kontakt.html" class="text-[#7A9E7E] font-semibold">Kontakt</a>
+            </nav>
+            <button class="md:hidden flex items-center" onclick="toggleMobileMenu()">
+                <iconify-icon icon="solar:hamburger-menu-linear" stroke-width="1.5" class="text-2xl text-gray-800"></iconify-icon>
+            </button>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden mt-4 border-t border-gray-200/60 pt-4 space-y-2 text-sm font-medium text-gray-700">
+            <a href="index.html#o-mnie" class="block px-3 py-2 rounded-xl hover:bg-[#F7F3EE]">O mnie</a>
+            <div>
+                <button class="flex w-full items-center justify-between px-3 py-2 rounded-xl hover:bg-[#F7F3EE]" onclick="toggleMobileOferta()">
+                    <span>Oferta</span>
+                    <iconify-icon icon="solar:alt-arrow-down-linear" stroke-width="2" id="mobile-oferta-caret" class="transition-transform duration-200"></iconify-icon>
+                </button>
+                <div id="mobile-oferta-panel" class="hidden pl-4 space-y-1 mt-1">
+                    <a href="terapia-indywidualna.html" class="flex items-center gap-3 px-3 py-2 rounded-xl hover:bg-[#F7F3EE] text-gray-600"><iconify-icon icon="solar:user-linear" class="text-[#7A9E7E] text-lg"></iconify-icon>Terapia Indywidualna</a>
+                    <a href="terapia-par.html" class="flex items-center gap-3 px-3 py-2 rounded-xl hover:bg-[#F7F3EE] text-gray-600"><iconify-icon icon="solar:hand-shake-linear" class="text-[#7A9E7E] text-lg"></iconify-icon>Terapia Par</a>
+                    <a href="wsparcie-rodzin.html" class="flex items-center gap-3 px-3 py-2 rounded-xl hover:bg-[#F7F3EE] text-gray-600"><iconify-icon icon="solar:users-group-two-rounded-linear" class="text-[#7A9E7E] text-lg"></iconify-icon>Wsparcie dla Rodzin</a>
+                    <a href="terapia-mlodziezy.html" class="flex items-center gap-3 px-3 py-2 rounded-xl hover:bg-[#F7F3EE] text-gray-600"><iconify-icon icon="solar:backpack-linear" class="text-[#7A9E7E] text-lg"></iconify-icon>Terapia Młodzieży</a>
+                    <a href="oferta.html" class="flex items-center gap-2 px-3 py-2 text-xs text-[#7A9E7E] font-semibold">Cała oferta →</a>
+                </div>
+            </div>
+            <a href="kontakt.html" class="block px-3 py-2 rounded-xl text-[#7A9E7E] font-semibold">Kontakt</a>
+        </div>
+    </header>
+    <script>
+        function toggleMegaMenu() {
+            const menu = document.getElementById('mega-menu');
+            const caret = document.getElementById('mega-caret');
+            const isOpen = !menu.classList.contains('hidden');
+            menu.classList.toggle('hidden');
+            caret.classList.toggle('rotate-180', !isOpen);
+        }
+        document.addEventListener('click', function (e) {
+            const wrap = document.getElementById('nav-oferta');
+            if (wrap && !wrap.contains(e.target)) {
+                const menu = document.getElementById('mega-menu');
+                if (menu) menu.classList.add('hidden');
+                const caret = document.getElementById('mega-caret');
+                if (caret) caret.classList.remove('rotate-180');
+            }
+        });
+        document.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape') {
+                const menu = document.getElementById('mega-menu');
+                if (menu) menu.classList.add('hidden');
+            }
+        });
+        function toggleMobileMenu() { document.getElementById('mobile-menu').classList.toggle('hidden'); }
+        function toggleMobileOferta() {
+            document.getElementById('mobile-oferta-panel').classList.toggle('hidden');
+            document.getElementById('mobile-oferta-caret').classList.toggle('rotate-180');
+        }
+    </script>
+
+
+    <main class="flex-grow bg-[#F7F3EE]">
+
+        <!-- Hero -->
+        <section class="pt-16 pb-10 px-6 lg:px-12 text-center">
+            <div class="max-w-2xl mx-auto">
+                <div
+                    class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white border border-[#7A9E7E]/20 text-[#7A9E7E] text-xs font-medium mb-6">
+                    <iconify-icon icon="solar:phone-linear" stroke-width="1.5"></iconify-icon>
+                    <span>Kontakt</span>
+                </div>
+                <h1 class="font-serif text-4xl md:text-5xl text-gray-900 tracking-tight mb-5">
+                    Porozmawiajmy<br><span class="text-[#7A9E7E] italic font-normal">o wsparciu</span>
+                </h1>
+                <p class="text-gray-600 text-lg leading-relaxed">
+                    Pracuję stacjonarnie w <strong class="text-gray-800 font-medium">Gdańsku</strong> oraz zdalnie —
+                    <strong class="text-gray-800 font-medium">online</strong> na terenie całej Polski.
+                </p>
+            </div>
+        </section>
+
+        <!-- =====================================================================
+             WAŻNY KOMUNIKAT — zapełniony grafik / lista rezerwowa
+             ===================================================================== -->
+        <section class="px-6 lg:px-12 pb-12">
+            <div class="max-w-3xl mx-auto">
+                <div
+                    class="notice-pulse bg-white rounded-3xl border-2 border-[#C4875A]/50 p-8 md:p-10 relative overflow-hidden">
+
+                    <!-- Decorative background blob -->
+                    <div class="absolute -right-10 -top-10 w-48 h-48 rounded-full bg-[#C4875A]/5 pointer-events-none">
+                    </div>
+
+                    <!-- Icon + badge -->
+                    <div class="flex items-start gap-5 mb-6">
+                        <div
+                            class="shrink-0 w-14 h-14 rounded-2xl bg-[#C4875A]/10 flex items-center justify-center text-[#C4875A]">
+                            <iconify-icon icon="solar:calendar-search-linear" stroke-width="1.5"
+                                class="text-3xl"></iconify-icon>
+                        </div>
+                        <div>
+                            <span
+                                class="inline-block bg-[#C4875A] text-white text-xs font-semibold px-3 py-1 rounded-full mb-2 tracking-wide">Ważna
+                                informacja</span>
+                            <h2 class="font-serif text-2xl md:text-3xl text-gray-900 tracking-tight leading-snug">
+                                Informacja o kalendarzu wizyt
+                            </h2>
+                        </div>
+                    </div>
+
+                    <!-- Treść komunikatu -->
+                    <div
+                        class="space-y-4 text-gray-700 leading-relaxed text-base md:text-[1.05rem] pl-0 md:pl-[4.75rem]">
+                        <p>
+                            Dziękuję za zainteresowanie kalendarzem wizyt. Obecnie pracuję już zapełnionym grafikiem,
+                            dlatego zrezygnowałam z jego udostępniania.
+                        </p>
+                        <p>
+                            Jeśli potrzebujecie / potrzebujesz mojego wsparcia — zawsze zachęcam do kontaktu <strong
+                                class="text-gray-900">telefonicznego, SMS, WhatsApp lub mailowego</strong>. Zdarzają się
+                            terminy zwalniane nieprzewidzianie.
+                        </p>
+
+                        <!-- Czas oczekiwania — wyróżniony -->
+                        <div
+                            class="mt-6 inline-flex items-center gap-3 bg-[#F7F3EE] rounded-2xl px-5 py-3.5 border border-[#C4875A]/20">
+                            <iconify-icon icon="solar:clock-circle-linear" stroke-width="1.5"
+                                class="text-[#C4875A] text-2xl shrink-0"></iconify-icon>
+                            <span class="text-sm font-medium text-gray-800">
+                                Obecny czas oczekiwania na liście rezerwowej: <strong class="text-[#C4875A]">ok. 2
+                                    tygodnie</strong>
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- CTA buttons -->
+                    <div class="mt-8 flex flex-col sm:flex-row gap-3 pl-0 md:pl-[4.75rem]">
+                        <a href="tel:+48886847122"
+                            class="inline-flex justify-center items-center gap-2 bg-[#C4875A] text-white px-7 py-3.5 rounded-full text-sm font-medium transition-transform hover:scale-[1.02] hover:shadow-md active:scale-[0.98]">
+                            <iconify-icon icon="solar:phone-bold" class="text-lg"></iconify-icon>
+                            Zadzwoń / WhatsApp
+                        </a>
+                        <a href="mailto:Kontakt@konsultacjerodzinne.pl"
+                            class="inline-flex justify-center items-center gap-2 bg-white border border-gray-200 text-gray-800 px-7 py-3.5 rounded-full text-sm font-medium transition-colors hover:bg-gray-50 hover:border-gray-300">
+                            <iconify-icon icon="solar:letter-linear" stroke-width="1.5" class="text-lg"></iconify-icon>
+                            Napisz e-mail
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =====================================================================
+             DANE KONTAKTOWE + FORMULARZ
+             ===================================================================== -->
+        <section class="px-6 lg:px-12 pb-20">
+            <div class="max-w-7xl mx-auto grid lg:grid-cols-5 gap-10 items-start">
+
+                <!-- Formularz (3/5) -->
+                <div
+                    class="lg:col-span-3 bg-white rounded-3xl shadow-[0_8px_40px_rgb(0,0,0,0.05)] border border-gray-100 p-8 md:p-10">
+                    <h2 class="font-serif text-2xl text-gray-900 tracking-tight mb-2">Napisz wiadomość</h2>
+                    <p class="text-sm text-gray-500 mb-8">Odpiszę w ciągu 24 godzin. Możesz też dopisać się na listę
+                        rezerwową.</p>
+
+                    <!-- Success state -->
+                    <div id="form-success" class="hidden flex-col items-center justify-center text-center py-12">
+                        <div
+                            class="w-16 h-16 rounded-full bg-[#7A9E7E]/10 flex items-center justify-center text-[#7A9E7E] mb-5">
+                            <iconify-icon icon="solar:check-circle-bold" class="text-4xl"></iconify-icon>
+                        </div>
+                        <p class="font-serif text-2xl text-gray-900 mb-2">Dziękuję!</p>
+                        <p class="text-gray-600 text-sm">Odezwę się w ciągu 24h.</p>
+                    </div>
+
+                    <form id="contact-form" onsubmit="handleForm(event)" novalidate>
+                        <!-- Dwukolumnowy na desktop -->
+                        <div class="grid sm:grid-cols-2 gap-5 mb-5">
+                            <div>
+                                <label for="name"
+                                    class="block text-xs font-semibold text-gray-500 uppercase tracking-widest mb-2">Imię
+                                    <span class="text-[#C4875A]">*</span></label>
+                                <input id="name" name="name" type="text" required placeholder="np. Anna"
+                                    class="w-full rounded-xl border border-gray-200 bg-[#F7F3EE]/60 px-4 py-3 text-sm text-gray-800 placeholder-gray-400 focus:outline-none focus:border-[#7A9E7E] focus:ring-2 focus:ring-[#7A9E7E]/20 transition">
+                            </div>
+                            <div>
+                                <label for="contact"
+                                    class="block text-xs font-semibold text-gray-500 uppercase tracking-widest mb-2">Email
+                                    lub telefon <span class="text-[#C4875A]">*</span></label>
+                                <input id="contact" name="contact" type="text" required
+                                    placeholder="np. anna@email.com lub 500 000 000"
+                                    class="w-full rounded-xl border border-gray-200 bg-[#F7F3EE]/60 px-4 py-3 text-sm text-gray-800 placeholder-gray-400 focus:outline-none focus:border-[#7A9E7E] focus:ring-2 focus:ring-[#7A9E7E]/20 transition">
+                            </div>
+                        </div>
+
+                        <div class="mb-5">
+                            <label for="topic"
+                                class="block text-xs font-semibold text-gray-500 uppercase tracking-widest mb-2">Temat</label>
+                            <select id="topic" name="topic"
+                                class="w-full rounded-xl border border-gray-200 bg-[#F7F3EE]/60 px-4 py-3 text-sm text-gray-700 focus:outline-none focus:border-[#7A9E7E] focus:ring-2 focus:ring-[#7A9E7E]/20 transition appearance-none">
+                                <option value="">— wybierz (opcjonalnie) —</option>
+                                <option value="lista">Chcę dopisać się na listę rezerwową</option>
+                                <option value="indywidualna">Konsultacja indywidualna</option>
+                                <option value="pary">Terapia par</option>
+                                <option value="rodzinna">Konsultacja rodzinna</option>
+                                <option value="specjalista">Superwizja / konsultacja dla specjalisty</option>
+                                <option value="inne">Inne pytanie</option>
+                            </select>
+                        </div>
+
+                        <div class="mb-6">
+                            <label for="message"
+                                class="block text-xs font-semibold text-gray-500 uppercase tracking-widest mb-2">Wiadomość</label>
+                            <textarea id="message" name="message" rows="4"
+                                placeholder="Kilka słów o tym, z czym chcesz się zgłosić..."
+                                class="w-full rounded-xl border border-gray-200 bg-[#F7F3EE]/60 px-4 py-3 text-sm text-gray-800 placeholder-gray-400 focus:outline-none focus:border-[#7A9E7E] focus:ring-2 focus:ring-[#7A9E7E]/20 transition resize-none"></textarea>
+                        </div>
+
+                        <!-- RODO -->
+                        <div class="mb-8">
+                            <label class="flex items-start gap-3 cursor-pointer">
+                                <input id="rodo" name="rodo" type="checkbox" required
+                                    class="mt-0.5 w-4 h-4 rounded border-gray-300 accent-[#7A9E7E] shrink-0">
+                                <span class="text-xs text-gray-500 leading-relaxed">
+                                    Wyrażam zgodę na przetwarzanie moich danych osobowych w celu odpowiedzi na
+                                    zapytanie, zgodnie z <a href="#"
+                                        class="text-[#7A9E7E] underline underline-offset-2">Polityką Prywatności</a>.
+                                    <span class="text-[#C4875A]">*</span>
+                                </span>
+                            </label>
+                            <p id="rodo-error" class="hidden text-xs text-red-500 mt-2 pl-7">Proszę wyrazić zgodę, aby
+                                kontynuować.</p>
+                        </div>
+
+                        <button type="submit"
+                            class="w-full sm:w-auto inline-flex justify-center items-center gap-2 bg-[#C4875A] text-white px-8 py-3.5 rounded-full text-sm font-medium transition-transform hover:scale-[1.02] hover:shadow-sm active:scale-[0.98]">
+                            Wyślij wiadomość
+                            <iconify-icon icon="solar:arrow-right-linear" stroke-width="1.5"
+                                class="text-lg"></iconify-icon>
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Sidebar: Dane teleadresowe (2/5) -->
+                <div class="lg:col-span-2 space-y-5">
+
+                    <!-- Telefon / WhatsApp -->
+                    <div
+                        class="bg-white rounded-2xl border border-gray-100 shadow-[0_4px_20px_rgb(0,0,0,0.03)] p-6 flex items-start gap-4 group hover:border-[#7A9E7E]/30 transition-colors">
+                        <div
+                            class="w-10 h-10 rounded-xl bg-[#F7F3EE] flex items-center justify-center text-[#7A9E7E] shrink-0 group-hover:scale-105 transition-transform">
+                            <iconify-icon icon="solar:phone-linear" stroke-width="1.5" class="text-xl"></iconify-icon>
+                        </div>
+                        <div>
+                            <p class="text-xs font-semibold text-gray-400 uppercase tracking-widest mb-1">Tel / WhatsApp
+                            </p>
+                            <a href="tel:+48886847122"
+                                class="text-gray-800 font-medium text-base hover:text-[#7A9E7E] transition-colors">886-847-122</a>
+                            <p class="text-xs text-gray-400 mt-1">Telefon · SMS · WhatsApp</p>
+                        </div>
+                    </div>
+
+                    <!-- E-mail -->
+                    <div
+                        class="bg-white rounded-2xl border border-gray-100 shadow-[0_4px_20px_rgb(0,0,0,0.03)] p-6 flex items-start gap-4 group hover:border-[#7A9E7E]/30 transition-colors">
+                        <div
+                            class="w-10 h-10 rounded-xl bg-[#F7F3EE] flex items-center justify-center text-[#7A9E7E] shrink-0 group-hover:scale-105 transition-transform">
+                            <iconify-icon icon="solar:letter-linear" stroke-width="1.5" class="text-xl"></iconify-icon>
+                        </div>
+                        <div>
+                            <p class="text-xs font-semibold text-gray-400 uppercase tracking-widest mb-1">E-mail</p>
+                            <a href="mailto:Kontakt@konsultacjerodzinne.pl"
+                                class="text-gray-800 font-medium text-sm hover:text-[#7A9E7E] transition-colors break-all">Kontakt@konsultacjerodzinne.pl</a>
+                            <p class="text-xs text-gray-400 mt-1">Odpowiadam w ciągu 24h</p>
+                        </div>
+                    </div>
+
+                    <!-- Adres -->
+                    <div
+                        class="bg-white rounded-2xl border border-gray-100 shadow-[0_4px_20px_rgb(0,0,0,0.03)] p-6 flex items-start gap-4 group hover:border-[#7A9E7E]/30 transition-colors">
+                        <div
+                            class="w-10 h-10 rounded-xl bg-[#F7F3EE] flex items-center justify-center text-[#7A9E7E] shrink-0 group-hover:scale-105 transition-transform">
+                            <iconify-icon icon="solar:map-point-linear" stroke-width="1.5"
+                                class="text-xl"></iconify-icon>
+                        </div>
+                        <div class="flex-1">
+                            <p class="text-xs font-semibold text-gray-400 uppercase tracking-widest mb-1">Adres gabinetu
+                            </p>
+                            <p class="text-gray-800 font-medium text-sm leading-relaxed">ul. Łódzka 64/43<br>Gdańsk</p>
+                            <a href="https://www.google.com/maps/search/ul.+%C5%81%C3%B3dzka+64+Gda%C5%84sk"
+                                target="_blank" rel="noopener"
+                                class="mt-3 inline-flex items-center gap-1.5 text-xs font-medium text-[#7A9E7E] hover:text-[#5d8063] transition-colors">
+                                <iconify-icon icon="solar:map-linear" stroke-width="1.5"></iconify-icon>
+                                Otwórz w Mapach Google
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Sesje online -->
+                    <div
+                        class="bg-gradient-to-br from-[#7A9E7E]/10 to-[#7A9E7E]/5 rounded-2xl border border-[#7A9E7E]/15 p-6 flex items-start gap-4">
+                        <div
+                            class="w-10 h-10 rounded-xl bg-white flex items-center justify-center text-[#7A9E7E] shrink-0">
+                            <iconify-icon icon="solar:monitor-smartphone-linear" stroke-width="1.5"
+                                class="text-xl"></iconify-icon>
+                        </div>
+                        <div>
+                            <p class="text-xs font-semibold text-[#7A9E7E] uppercase tracking-widest mb-1">Sesje online
+                            </p>
+                            <p class="text-gray-700 text-sm leading-relaxed">Prowadzę sesje przez Google Meet i Zoom — z
+                                dowolnego miejsca w Polsce.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Mapa -->
+        <div class="px-6 lg:px-12 pb-20">
+            <div
+                class="max-w-7xl mx-auto rounded-2xl overflow-hidden shadow-[0_8px_30px_rgb(0,0,0,0.06)] border border-gray-100">
+                <iframe title="Lokalizacja gabinetu — ul. Łódzka 64/43, Gdańsk"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2325.123456!2d18.6321!3d54.3520!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46fd73a9d6d24f57%3A0x5c7a3e09ab2de23!2sul.+%C5%81%C3%B3dzka%2C+Gda%C5%84sk!5e0!3m2!1spl!2spl!4v1710000000001!5m2!1spl!2spl"
+                    width="100%" height="380" style="border:0; display:block; filter: saturate(0.85) contrast(1.05);"
+                    allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-gray-100 py-8 px-6 lg:px-12 text-center">
+        <p class="text-xs text-gray-400">© 2025 Gabinet Konsultacji Rodzinnych · Gdańsk &amp; Online</p>
+        <a href="index.html"
+            class="mt-2 inline-flex items-center gap-1.5 text-xs text-[#7A9E7E] hover:underline underline-offset-2">
+            <iconify-icon icon="solar:arrow-left-linear" stroke-width="1.5"></iconify-icon>
+            Wróć na stronę główną
+        </a>
+    </footer>
+
+    <!-- FAB: Zadzwoń (mobile) -->
+    <a id="fab-call" href="tel:+48886847122"
+        class="fab-hidden fixed bottom-6 right-6 z-50 flex md:hidden items-center gap-2 bg-[#7A9E7E] text-white px-5 py-3.5 rounded-full shadow-lg text-sm font-medium transition-all duration-300 hover:bg-[#5d8063] active:scale-95">
+        <iconify-icon icon="solar:phone-bold" class="text-lg"></iconify-icon>
+        Zadzwoń teraz
+    </a>
+
+    <script>
+        function handleForm(e) {
+            e.preventDefault();
+            const rodo = document.getElementById('rodo');
+            const rodoError = document.getElementById('rodo-error');
+            if (!rodo.checked) {
+                rodoError.classList.remove('hidden');
+                rodo.focus();
+                return;
+            }
+            rodoError.classList.add('hidden');
+            document.getElementById('contact-form').classList.add('hidden');
+            const success = document.getElementById('form-success');
+            success.classList.remove('hidden');
+            success.classList.add('flex');
+        }
+
+        // FAB — pojawia się po przewinięciu poza hero
+        (function () {
+            const fab = document.getElementById('fab-call');
+            const hero = document.querySelector('main > section');
+            if (!fab || !hero) return;
+            const obs = new IntersectionObserver(
+                ([entry]) => {
+                    if (!entry.isIntersecting) {
+                        fab.classList.remove('fab-hidden');
+                        fab.classList.add('fab-visible');
+                    } else {
+                        fab.classList.add('fab-hidden');
+                        fab.classList.remove('fab-visible');
+                    }
+                },
+                { threshold: 0.2 }
+            );
+            obs.observe(hero);
+        })();
+    </script>
+
+</body>
+
+</html>

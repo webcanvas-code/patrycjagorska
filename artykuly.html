@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artykuły · Konsultacje Rodzinne Gdańsk</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+        }
+
+        .font-serif {
+            font-family: 'Playfair Display', serif;
+        }
+    </style>
+</head>
+
+<body class="bg-white text-gray-800 antialiased selection:bg-[#7A9E7E]/20 selection:text-[#7A9E7E] flex flex-col min-h-screen">
+    <header class="w-full sticky top-0 z-50 bg-[#F7F3EE]/90 backdrop-blur-md py-4 px-6 lg:px-12 border-b border-[#7A9E7E]/10 shadow-[0_4px_30px_rgb(0,0,0,0.03)] transition-all duration-300">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <a href="index.html" class="flex items-center transition-transform hover:scale-105">
+                <img src="logo.svg" alt="Konsultacje Rodzinne Gdańsk" class="h-16 w-auto object-contain">
+            </a>
+            <nav class="hidden md:flex gap-8 items-center text-sm font-medium text-gray-600">
+                <a href="index.html#o-mnie" class="hover:text-[#7A9E7E] transition-colors">O mnie</a>
+                <div class="relative" id="nav-oferta">
+                    <button class="flex items-center gap-1 hover:text-[#7A9E7E] transition-colors focus:outline-none"
+                        aria-expanded="false" aria-controls="mega-menu" onclick="toggleMegaMenu()">
+                        Oferta
+                        <iconify-icon icon="solar:alt-arrow-down-linear" stroke-width="2"
+                            class="text-sm transition-transform duration-200" id="mega-caret"></iconify-icon>
+                    </button>
+                    <div id="mega-menu"
+                        class="absolute top-full right-[-40px] mt-4 w-[560px] lg:w-[640px] bg-white/95 backdrop-blur-md rounded-3xl shadow-[0_20px_60px_rgb(0,0,0,0.1)] border border-gray-100 p-6 hidden z-50">
+                        <div class="absolute -top-2 right-[60px] w-4 h-4 bg-white rotate-45 border-l border-t border-gray-100 rounded-sm"></div>
+                        <p class="text-xs font-semibold text-gray-400 uppercase tracking-widest mb-4">Wybierz formę wsparcia</p>
+                        <div class="grid grid-cols-2 gap-3 mb-4">
+                            <a href="terapia-indywidualna.html" class="group flex items-start gap-4 p-4 rounded-2xl hover:bg-[#F7F3EE] transition-colors">
+                                <div class="w-10 h-10 rounded-xl bg-[#7A9E7E]/10 flex items-center justify-center text-[#7A9E7E] shrink-0 group-hover:bg-[#7A9E7E]/20 transition-colors">
+                                    <iconify-icon icon="solar:user-linear" stroke-width="1.5" class="text-xl"></iconify-icon>
+                                </div>
+                                <div>
+                                    <div class="font-semibold text-gray-800 text-sm">Terapia Indywidualna</div>
+                                    <div class="text-xs text-gray-500 mt-0.5">Dla dorosłych · 50 min · 180 zł</div>
+                                </div>
+                            </a>
+                            <a href="terapia-par.html" class="group flex items-start gap-4 p-4 rounded-2xl hover:bg-[#F7F3EE] transition-colors">
+                                <div class="w-10 h-10 rounded-xl bg-[#7A9E7E]/10 flex items-center justify-center text-[#7A9E7E] shrink-0 group-hover:bg-[#7A9E7E]/20 transition-colors">
+                                    <iconify-icon icon="solar:hand-shake-linear" stroke-width="1.5" class="text-xl"></iconify-icon>
+                                </div>
+                                <div>
+                                    <div class="font-semibold text-gray-800 text-sm">Terapia Par</div>
+                                    <div class="text-xs text-gray-500 mt-0.5">Małżeństwa · 80 min · 220 zł</div>
+                                </div>
+                            </a>
+                            <a href="wsparcie-rodzin.html" class="group flex items-start gap-4 p-4 rounded-2xl hover:bg-[#F7F3EE] transition-colors">
+                                <div class="w-10 h-10 rounded-xl bg-[#7A9E7E]/10 flex items-center justify-center text-[#7A9E7E] shrink-0 group-hover:bg-[#7A9E7E]/20 transition-colors">
+                                    <iconify-icon icon="solar:users-group-two-rounded-linear" stroke-width="1.5" class="text-xl"></iconify-icon>
+                                </div>
+                                <div>
+                                    <div class="font-semibold text-gray-800 text-sm">Wsparcie dla Rodzin</div>
+                                    <div class="text-xs text-gray-500 mt-0.5">Rodziny · 90 min · 250 zł</div>
+                                </div>
+                            </a>
+                            <a href="terapia-mlodziezy.html" class="group flex items-start gap-4 p-4 rounded-2xl hover:bg-[#F7F3EE] transition-colors">
+                                <div class="w-10 h-10 rounded-xl bg-[#7A9E7E]/10 flex items-center justify-center text-[#7A9E7E] shrink-0 group-hover:bg-[#7A9E7E]/20 transition-colors">
+                                    <iconify-icon icon="solar:backpack-linear" stroke-width="1.5" class="text-xl"></iconify-icon>
+                                </div>
+                                <div>
+                                    <div class="font-semibold text-gray-800 text-sm">Terapia Młodzieży</div>
+                                    <div class="text-xs text-gray-500 mt-0.5">15+ lat · 50 min</div>
+                                </div>
+                            </a>
+                            <a href="szkolenia.html" class="col-span-2 group flex items-start gap-4 p-4 rounded-2xl hover:bg-[#F7F3EE] transition-colors">
+                                <div class="w-10 h-10 rounded-xl bg-[#7A9E7E]/10 flex items-center justify-center text-[#7A9E7E] shrink-0 group-hover:bg-[#7A9E7E]/20 transition-colors">
+                                    <iconify-icon icon="solar:diploma-linear" stroke-width="1.5" class="text-xl"></iconify-icon>
+                                </div>
+                                <div>
+                                    <div class="font-semibold text-gray-800 text-sm">Szkolenia i Warsztaty</div>
+                                    <div class="text-xs text-gray-500 mt-0.5">Dla instytucji i placówek</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="border-t border-gray-100 pt-4">
+                            <a href="oferta.html" class="inline-flex items-center gap-1.5 text-xs font-semibold text-[#7A9E7E] hover:text-[#5d8063] transition-colors">
+                                Zobacz całą ofertę
+                                <iconify-icon icon="solar:arrow-right-linear" stroke-width="2"></iconify-icon>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <a href="artykuly.html" class="text-[#7A9E7E] font-semibold">Artykuły</a>
+                <a href="kontakt.html" class="hover:text-[#7A9E7E] transition-colors">Kontakt</a>
+            </nav>
+            <button id="mobile-menu-btn" class="md:hidden flex items-center" onclick="toggleMobileMenu()">
+                <iconify-icon icon="solar:hamburger-menu-linear" stroke-width="1.5" class="text-2xl text-gray-800"></iconify-icon>
+            </button>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden mt-4 border-t border-gray-200/60 pt-4 space-y-2 text-sm font-medium text-gray-700">
+            <a href="index.html#o-mnie" class="block px-3 py-2 rounded-xl hover:bg-[#F7F3EE]">O mnie</a>
+            <div>
+                <button class="flex w-full items-center justify-between px-3 py-2 rounded-xl hover:bg-[#F7F3EE]" onclick="toggleMobileOferta()">
+                    <span>Oferta</span>
+                    <iconify-icon icon="solar:alt-arrow-down-linear" stroke-width="2" id="mobile-oferta-caret" class="transition-transform duration-200"></iconify-icon>
+                </button>
+                <div id="mobile-oferta-panel" class="hidden pl-4 space-y-1 mt-1">
+                    <a href="terapia-indywidualna.html" class="flex items-center gap-3 px-3 py-2 rounded-xl hover:bg-[#F7F3EE] text-gray-600"><iconify-icon icon="solar:user-linear" class="text-[#7A9E7E] text-lg"></iconify-icon>Terapia Indywidualna</a>
+                    <a href="terapia-par.html" class="flex items-center gap-3 px-3 py-2 rounded-xl hover:bg-[#F7F3EE] text-gray-600"><iconify-icon icon="solar:hand-shake-linear" class="text-[#7A9E7E] text-lg"></iconify-icon>Terapia Par</a>
+                    <a href="wsparcie-rodzin.html" class="flex items-center gap-3 px-3 py-2 rounded-xl hover:bg-[#F7F3EE] text-gray-600"><iconify-icon icon="solar:users-group-two-rounded-linear" class="text-[#7A9E7E] text-lg"></iconify-icon>Wsparcie dla Rodzin</a>
+                    <a href="terapia-mlodziezy.html" class="flex items-center gap-3 px-3 py-2 rounded-xl hover:bg-[#F7F3EE] text-gray-600"><iconify-icon icon="solar:backpack-linear" class="text-[#7A9E7E] text-lg"></iconify-icon>Terapia Młodzieży</a>
+                    <a href="szkolenia.html" class="flex items-center gap-3 px-3 py-2 rounded-xl hover:bg-[#F7F3EE] text-gray-600"><iconify-icon icon="solar:diploma-linear" class="text-[#7A9E7E] text-lg"></iconify-icon>Szkolenia i Warsztaty</a>
+                    <a href="oferta.html" class="flex items-center gap-2 px-3 py-2 text-xs text-[#7A9E7E] font-semibold">Cała oferta →</a>
+                </div>
+            </div>
+            <a href="artykuly.html" class="block px-3 py-2 rounded-xl bg-[#F7F3EE] text-[#7A9E7E]">Artykuły</a>
+            <a href="kontakt.html" class="block px-3 py-2 rounded-xl hover:bg-[#F7F3EE]">Kontakt</a>
+        </div>
+    </header>
+
+    <script>
+        function toggleMegaMenu() {
+            const menu = document.getElementById('mega-menu');
+            const caret = document.getElementById('mega-caret');
+            const isOpen = !menu.classList.contains('hidden');
+            menu.classList.toggle('hidden');
+            caret.classList.toggle('rotate-180', !isOpen);
+        }
+        document.addEventListener('click', function (e) {
+            const wrap = document.getElementById('nav-oferta');
+            if (wrap && !wrap.contains(e.target)) {
+                const menu = document.getElementById('mega-menu');
+                if (menu) menu.classList.add('hidden');
+                const caret = document.getElementById('mega-caret');
+                if (caret) caret.classList.remove('rotate-180');
+            }
+        });
+        document.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape') {
+                const menu = document.getElementById('mega-menu');
+                if (menu) menu.classList.add('hidden');
+            }
+        });
+        function toggleMobileMenu() { document.getElementById('mobile-menu').classList.toggle('hidden'); }
+        function toggleMobileOferta() {
+            document.getElementById('mobile-oferta-panel').classList.toggle('hidden');
+            document.getElementById('mobile-oferta-caret').classList.toggle('rotate-180');
+        }
+    </script>
+
+    <main class="flex-grow">
+        <section class="bg-[#F7F3EE] pt-16 pb-20 px-6 lg:px-12 text-center">
+            <div class="max-w-4xl mx-auto">
+                <span class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/90 text-[#7A9E7E] text-xs font-semibold uppercase tracking-wider mb-6">
+                    <iconify-icon icon="solar:document-text-linear"></iconify-icon>
+                    Baza wiedzy
+                </span>
+                <h1 class="font-serif text-4xl md:text-5xl lg:text-6xl text-gray-900 tracking-tight leading-[1.15] mb-6">
+                    Artykuły o relacjach, emocjach i rodzicielstwie
+                </h1>
+                <p class="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
+                    Praktyczne wskazówki i krótkie poradniki, które pomogą spokojniej przechodzić przez codzienne wyzwania w rodzinie i związku.
+                </p>
+            </div>
+        </section>
+
+        <section class="py-20 px-6 lg:px-12">
+            <div class="max-w-7xl mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <article class="rounded-3xl border border-[#7A9E7E]/20 p-8 shadow-[0_8px_40px_rgba(122,158,126,0.08)] hover:border-[#7A9E7E] transition-colors">
+                    <p class="text-xs uppercase tracking-widest text-gray-400 font-semibold mb-4">Młodzież · 12 marca 2026</p>
+                    <h2 class="font-serif text-2xl text-gray-900 leading-tight mb-4">Jak rozmawiać z nastolatkiem w kryzysie?</h2>
+                    <p class="text-gray-600 leading-relaxed mb-6">
+                        Co mówić, kiedy emocje są wysokie i rozmowa szybko zamienia się w konflikt. Proste techniki pierwszego kontaktu i budowania poczucia bezpieczeństwa.
+                    </p>
+                    <a href="artykul-jak-rozmawiac-z-nastolatkiem-w-kryzysie.html" class="inline-flex items-center gap-2 text-[#7A9E7E] font-semibold hover:text-[#5d8063] transition-colors">
+                        Czytaj więcej
+                        <iconify-icon icon="solar:arrow-right-linear"></iconify-icon>
+                    </a>
+                </article>
+
+                <article class="rounded-3xl border border-[#7A9E7E]/20 p-8 shadow-[0_8px_40px_rgba(122,158,126,0.08)] hover:border-[#7A9E7E] transition-colors">
+                    <p class="text-xs uppercase tracking-widest text-gray-400 font-semibold mb-4">Relacje · 5 marca 2026</p>
+                    <h2 class="font-serif text-2xl text-gray-900 leading-tight mb-4">Co zrobić przed pierwszą terapią par?</h2>
+                    <p class="text-gray-600 leading-relaxed mb-6">
+                        Jak przygotować się do pierwszej sesji, żeby lepiej wykorzystać czas spotkania i zacząć rozmowę o tym, co naprawdę ważne dla obojga partnerów.
+                    </p>
+                    <a href="#" class="inline-flex items-center gap-2 text-[#7A9E7E] font-semibold hover:text-[#5d8063] transition-colors">
+                        Czytaj więcej
+                        <iconify-icon icon="solar:arrow-right-linear"></iconify-icon>
+                    </a>
+                </article>
+
+                <article class="rounded-3xl border border-[#7A9E7E]/20 p-8 shadow-[0_8px_40px_rgba(122,158,126,0.08)] hover:border-[#7A9E7E] transition-colors">
+                    <p class="text-xs uppercase tracking-widest text-gray-400 font-semibold mb-4">Rodzina · 27 lutego 2026</p>
+                    <h2 class="font-serif text-2xl text-gray-900 leading-tight mb-4">Stres rodzica: 5 kroków do równowagi</h2>
+                    <p class="text-gray-600 leading-relaxed mb-6">
+                        Krótki plan na odzyskanie oddechu w codziennym natłoku obowiązków: od pracy z napięciem po lepszą organizację wsparcia w rodzinie.
+                    </p>
+                    <a href="#" class="inline-flex items-center gap-2 text-[#7A9E7E] font-semibold hover:text-[#5d8063] transition-colors">
+                        Czytaj więcej
+                        <iconify-icon icon="solar:arrow-right-linear"></iconify-icon>
+                    </a>
+                </article>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>

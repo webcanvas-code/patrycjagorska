@@ -36,10 +36,8 @@
 
                 <!-- Mega-menu trigger -->
                 <div class="relative" id="nav-oferta">
-                    <button
-                        class="flex items-center gap-1 hover:text-[#7A9E7E] transition-colors focus:outline-none"
-                        aria-expanded="false" aria-controls="mega-menu"
-                        onclick="toggleMegaMenu()">
+                    <button class="flex items-center gap-1 hover:text-[#7A9E7E] transition-colors focus:outline-none"
+                        aria-expanded="false" aria-controls="mega-menu" onclick="toggleMegaMenu()">
                         Oferta
                         <iconify-icon icon="solar:alt-arrow-down-linear" stroke-width="2"
                             class="text-sm transition-transform duration-200" id="mega-caret"></iconify-icon>
@@ -49,7 +47,9 @@
                     <div id="mega-menu"
                         class="absolute top-full right-[-40px] mt-4 w-[560px] lg:w-[640px] bg-white/95 backdrop-blur-md rounded-3xl shadow-[0_20px_60px_rgb(0,0,0,0.1)] border border-gray-100 p-6 hidden z-50">
                         <!-- Arrow -->
-                        <div class="absolute -top-2 right-[60px] w-4 h-4 bg-white rotate-45 border-l border-t border-gray-100 rounded-sm"></div>
+                        <div
+                            class="absolute -top-2 right-[60px] w-4 h-4 bg-white rotate-45 border-l border-t border-gray-100 rounded-sm">
+                        </div>
 
                         <p class="text-xs font-semibold text-gray-400 uppercase tracking-widest mb-4">Wybierz formę
                             wsparcia</p>
@@ -109,10 +109,13 @@
                                     <div class="text-xs text-gray-500 mt-0.5">15+ lat &middot; 50 min</div>
                                 </div>
                             </a>
-                                                    <!-- Szkolenia i Warsztaty -->
-                            <a href="szkolenia.html" class="col-span-2 group flex items-start gap-4 p-4 rounded-2xl hover:bg-[#F7F3EE] transition-colors">
-                                <div class="w-10 h-10 rounded-xl bg-[#7A9E7E]/10 flex items-center justify-center text-[#7A9E7E] shrink-0 group-hover:bg-[#7A9E7E]/20 transition-colors">
-                                    <iconify-icon icon="solar:diploma-linear" stroke-width="1.5" class="text-xl"></iconify-icon>
+                            <!-- Szkolenia i Warsztaty -->
+                            <a href="szkolenia.html"
+                                class="col-span-2 group flex items-start gap-4 p-4 rounded-2xl hover:bg-[#F7F3EE] transition-colors">
+                                <div
+                                    class="w-10 h-10 rounded-xl bg-[#7A9E7E]/10 flex items-center justify-center text-[#7A9E7E] shrink-0 group-hover:bg-[#7A9E7E]/20 transition-colors">
+                                    <iconify-icon icon="solar:diploma-linear" stroke-width="1.5"
+                                        class="text-xl"></iconify-icon>
                                 </div>
                                 <div>
                                     <div class="font-semibold text-gray-800 text-sm">Szkolenia i Warsztaty</div>
@@ -121,7 +124,7 @@
                             </a>
                         </div>
                         <div class="border-t border-gray-100 pt-4">
-                                                <a href="oferta.html"
+                            <a href="oferta.html"
                                 class="inline-flex items-center gap-1.5 text-xs font-semibold text-[#7A9E7E] hover:text-[#5d8063] transition-colors">
                                 Zobacz całą ofertę
                                 <iconify-icon icon="solar:arrow-right-linear" stroke-width="2"></iconify-icon>
@@ -136,13 +139,14 @@
 
             <!-- Mobile hamburger -->
             <button id="mobile-menu-btn" class="md:hidden flex items-center" onclick="toggleMobileMenu()">
-                <iconify-icon icon="solar:hamburger-menu-linear" stroke-width="1.5"
-                    class="text-2xl text-gray-800" id="mobile-hamburger-icon"></iconify-icon>
+                <iconify-icon icon="solar:hamburger-menu-linear" stroke-width="1.5" class="text-2xl text-gray-800"
+                    id="mobile-hamburger-icon"></iconify-icon>
             </button>
         </div>
 
         <!-- Mobile Nav -->
-        <div id="mobile-menu" class="hidden md:hidden mt-4 border-t border-gray-200/60 pt-4 space-y-2 text-sm font-medium text-gray-700">
+        <div id="mobile-menu"
+            class="hidden md:hidden mt-4 border-t border-gray-200/60 pt-4 space-y-2 text-sm font-medium text-gray-700">
             <a href="#o-mnie" class="block px-3 py-2 rounded-xl hover:bg-[#F7F3EE]">O mnie</a>
             <!-- Mobile Oferta accordion -->
             <div>
@@ -153,23 +157,29 @@
                         class="transition-transform duration-200"></iconify-icon>
                 </button>
                 <div id="mobile-oferta-panel" class="hidden pl-4 space-y-1 mt-1">
-                    <a href="terapia-indywidualna.html" class="flex items-center gap-3 px-3 py-2 rounded-xl hover:bg-[#F7F3EE] text-gray-600">
+                    <a href="terapia-indywidualna.html"
+                        class="flex items-center gap-3 px-3 py-2 rounded-xl hover:bg-[#F7F3EE] text-gray-600">
                         <iconify-icon icon="solar:user-linear" class="text-[#7A9E7E] text-lg"></iconify-icon>
                         Terapia Indywidualna
                     </a>
-                    <a href="terapia-par.html" class="flex items-center gap-3 px-3 py-2 rounded-xl hover:bg-[#F7F3EE] text-gray-600">
+                    <a href="terapia-par.html"
+                        class="flex items-center gap-3 px-3 py-2 rounded-xl hover:bg-[#F7F3EE] text-gray-600">
                         <iconify-icon icon="solar:hand-shake-linear" class="text-[#7A9E7E] text-lg"></iconify-icon>
                         Terapia Par
                     </a>
-                    <a href="wsparcie-rodzin.html" class="flex items-center gap-3 px-3 py-2 rounded-xl hover:bg-[#F7F3EE] text-gray-600">
-                        <iconify-icon icon="solar:users-group-two-rounded-linear" class="text-[#7A9E7E] text-lg"></iconify-icon>
+                    <a href="wsparcie-rodzin.html"
+                        class="flex items-center gap-3 px-3 py-2 rounded-xl hover:bg-[#F7F3EE] text-gray-600">
+                        <iconify-icon icon="solar:users-group-two-rounded-linear"
+                            class="text-[#7A9E7E] text-lg"></iconify-icon>
                         Wsparcie dla Rodzin
                     </a>
-                    <a href="terapia-mlodziezy.html" class="flex items-center gap-3 px-3 py-2 rounded-xl hover:bg-[#F7F3EE] text-gray-600">
+                    <a href="terapia-mlodziezy.html"
+                        class="flex items-center gap-3 px-3 py-2 rounded-xl hover:bg-[#F7F3EE] text-gray-600">
                         <iconify-icon icon="solar:backpack-linear" class="text-[#7A9E7E] text-lg"></iconify-icon>
                         Terapia Młodzieży
                     </a>
-                    <a href="oferta.html" class="flex items-center gap-2 px-3 py-2 text-xs text-[#7A9E7E] font-semibold">
+                    <a href="oferta.html"
+                        class="flex items-center gap-2 px-3 py-2 text-xs text-[#7A9E7E] font-semibold">
                         Cała oferta →
                     </a>
                 </div>
@@ -229,14 +239,13 @@
 
             <!-- Tło obrazkowe z nakładką gradientową -->
             <div class="absolute inset-0 z-0 bg-[#F7F3EE]">
-                <img src="img/hero.jpg" alt="Konsultacje profesjonalne"
+                <img src="img/hero.png" alt="Konsultacje profesjonalne"
                     class="w-full h-full object-cover object-top md:object-center">
                 <div
                     class="absolute inset-0 bg-gradient-to-r from-[#F7F3EE] xl:from-[#F7F3EE] lg:from-[#F7F3EE]/95 via-[#F7F3EE]/85 lg:via-[#F7F3EE]/80 md:via-[#F7F3EE]/75 to-[#F7F3EE]/0">
                 </div>
                 <!-- Nakładka mobile -->
-                <div
-                    class="absolute inset-0 bg-gradient-to-b from-[#F7F3EE] via-[#F7F3EE]/95 to-transparent md:hidden">
+                <div class="absolute inset-0 bg-gradient-to-b from-[#F7F3EE] via-[#F7F3EE]/95 to-transparent md:hidden">
                 </div>
             </div>
 
@@ -254,7 +263,8 @@
                     <!-- Elegancki nagłówek -->
                     <h1
                         class="font-serif text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-gray-900 tracking-tight leading-[1.1] mb-8">
-                        Terapia par, rodzin<br>i młodzieży <span class="text-[#7A9E7E] italic font-normal">· Gdańsk</span>
+                        Terapia par, rodzin<br>i młodzieży <span class="text-[#7A9E7E] italic font-normal">·
+                            Gdańsk</span>
                     </h1>
 
                     <p class="text-lg md:text-xl text-gray-700 mb-12 max-w-2xl leading-relaxed">
@@ -278,23 +288,35 @@
 
                     <!-- Przebudowany Nowoczesny Trust Bar (Karty) -->
                     <div class="w-full flex flex-col sm:flex-row gap-4">
-                        <div class="flex items-center gap-4 bg-white/70 backdrop-blur-md px-5 py-4 rounded-2xl shadow-[0_4px_20px_rgb(0,0,0,0.03)] border border-white/50 hover:bg-white hover:shadow-[0_8px_30px_rgb(0,0,0,0.05)] transition-all">
-                            <div class="w-10 h-10 rounded-full bg-[#7A9E7E]/10 flex items-center justify-center shrink-0">
-                                <iconify-icon icon="solar:history-bold-duotone" class="text-[#7A9E7E] text-xl"></iconify-icon>
+                        <div
+                            class="flex items-center gap-4 bg-white/70 backdrop-blur-md px-5 py-4 rounded-2xl shadow-[0_4px_20px_rgb(0,0,0,0.03)] border border-white/50 hover:bg-white hover:shadow-[0_8px_30px_rgb(0,0,0,0.05)] transition-all">
+                            <div
+                                class="w-10 h-10 rounded-full bg-[#7A9E7E]/10 flex items-center justify-center shrink-0">
+                                <iconify-icon icon="solar:history-bold-duotone"
+                                    class="text-[#7A9E7E] text-xl"></iconify-icon>
                             </div>
-                            <span class="text-sm font-bold text-gray-800 leading-tight">20 lat<br><span class="text-xs text-gray-500 font-normal">doświadczenia</span></span>
+                            <span class="text-sm font-bold text-gray-800 leading-tight">20 lat<br><span
+                                    class="text-xs text-gray-500 font-normal">doświadczenia</span></span>
                         </div>
-                        <div class="flex items-center gap-4 bg-white/70 backdrop-blur-md px-5 py-4 rounded-2xl shadow-[0_4px_20px_rgb(0,0,0,0.03)] border border-white/50 hover:bg-white hover:shadow-[0_8px_30px_rgb(0,0,0,0.05)] transition-all">
-                            <div class="w-10 h-10 rounded-full bg-[#7A9E7E]/10 flex items-center justify-center shrink-0">
-                                <iconify-icon icon="solar:map-point-bold-duotone" class="text-[#7A9E7E] text-xl"></iconify-icon>
+                        <div
+                            class="flex items-center gap-4 bg-white/70 backdrop-blur-md px-5 py-4 rounded-2xl shadow-[0_4px_20px_rgb(0,0,0,0.03)] border border-white/50 hover:bg-white hover:shadow-[0_8px_30px_rgb(0,0,0,0.05)] transition-all">
+                            <div
+                                class="w-10 h-10 rounded-full bg-[#7A9E7E]/10 flex items-center justify-center shrink-0">
+                                <iconify-icon icon="solar:map-point-bold-duotone"
+                                    class="text-[#7A9E7E] text-xl"></iconify-icon>
                             </div>
-                            <span class="text-sm font-bold text-gray-800 leading-tight">Gdańsk<br><span class="text-xs text-gray-500 font-normal">& sesje online</span></span>
+                            <span class="text-sm font-bold text-gray-800 leading-tight">Gdańsk<br><span
+                                    class="text-xs text-gray-500 font-normal">& sesje online</span></span>
                         </div>
-                        <div class="flex items-center gap-4 bg-white/70 backdrop-blur-md px-5 py-4 rounded-2xl shadow-[0_4px_20px_rgb(0,0,0,0.03)] border border-white/50 hover:bg-white hover:shadow-[0_8px_30px_rgb(0,0,0,0.05)] transition-all">
-                            <div class="w-10 h-10 rounded-full bg-[#7A9E7E]/10 flex items-center justify-center shrink-0">
-                                <iconify-icon icon="solar:shield-check-bold-duotone" class="text-[#7A9E7E] text-xl"></iconify-icon>
+                        <div
+                            class="flex items-center gap-4 bg-white/70 backdrop-blur-md px-5 py-4 rounded-2xl shadow-[0_4px_20px_rgb(0,0,0,0.03)] border border-white/50 hover:bg-white hover:shadow-[0_8px_30px_rgb(0,0,0,0.05)] transition-all">
+                            <div
+                                class="w-10 h-10 rounded-full bg-[#7A9E7E]/10 flex items-center justify-center shrink-0">
+                                <iconify-icon icon="solar:shield-check-bold-duotone"
+                                    class="text-[#7A9E7E] text-xl"></iconify-icon>
                             </div>
-                            <span class="text-sm font-bold text-gray-800 leading-tight">Certyfikacja<br><span class="text-xs text-gray-500 font-normal">terapii TSR</span></span>
+                            <span class="text-sm font-bold text-gray-800 leading-tight">Nurt główny w pracy z
+                                klientem<br><span class="text-xs text-gray-500 font-normal">TSR</span></span>
                         </div>
                     </div>
 
@@ -315,13 +337,12 @@
 
                         <div class="space-y-6 text-gray-600 leading-relaxed text-base md:text-lg">
                             <p>
-                                Jestem doświadczonym specjalistą z zakresu psychologii, pedagogiki i socjoterapii. Od
-                                ponad dwóch dekad towarzyszę ludziom w pokonywaniu kryzysów, odnajdywaniu wewnętrznej
-                                siły i odbudowywaniu relacji.
+                                Specjalista pedagogiki i psychologii klinicznej, socjoterapi, edukacji seksualnej,
+                                mediacji
+                                i interwencji kryzysowej.
                             </p>
                             <p>
-                                W swojej pracy łączę wiedzę z głęboką empatią, dostosowując metody do unikalnych potrzeb
-                                każdej osoby, pary czy rodziny, która trafia do mojego gabinetu.
+                                W swojej pracy wykorzystuje głównie narzędzia TSR oraz terapii poliwagalnej.
                             </p>
                         </div>
 
@@ -333,7 +354,7 @@
                                     <iconify-icon icon="solar:diploma-linear" stroke-width="1.5"
                                         class="text-lg"></iconify-icon>
                                 </div>
-                                Magister Psychologii i Pedagogiki
+                                Terapeuta rodzin i par
                             </div>
                             <div class="flex items-center gap-3 text-sm text-gray-700 font-medium">
                                 <div
@@ -341,7 +362,7 @@
                                     <iconify-icon icon="solar:heart-angle-linear" stroke-width="1.5"
                                         class="text-lg"></iconify-icon>
                                 </div>
-                                Ukończone studium Socjoterapii
+                                Socjoterapeuta od 15 lat
                             </div>
                             <div class="flex items-center gap-3 text-sm text-gray-700 font-medium">
                                 <div
@@ -349,15 +370,15 @@
                                     <iconify-icon icon="solar:book-bookmark-linear" stroke-width="1.5"
                                         class="text-lg"></iconify-icon>
                                 </div>
-                                Certyfikowany Terapeuta TSR
+                                Główny nurt pracy TSR
                             </div>
                         </div>
 
                         <!-- Highlighted Quote -->
                         <div class="mt-12 pl-6 border-l-2 border-[#C4875A]">
                             <p class="font-serif italic text-xl text-gray-800 tracking-tight leading-relaxed">
-                                "Każdy problem, z którym się mierzysz, ma swoje rozwiązanie. Moim zadaniem jest pomóc Ci
-                                je dostrzec i bezpiecznie do niego dotrzeć."
+                                "Zmiany bywają trudne, moim zadaniem jest pomóc ci obrać kierunek tak byś nie utracił
+                                tego co dla Ciebie ważne i zyskał oczekiwane korzyści. "
                             </p>
                         </div>
                     </div>
@@ -394,9 +415,8 @@
                                 <h3 class="font-serif text-xl font-semibold text-gray-900 tracking-tight mb-3">Wartości
                                 </h3>
                                 <p class="text-sm text-gray-600 leading-relaxed">
-                                    Fundamentem mojej pracy jest całkowita akceptacja, brak oceny i głęboka empatia.
-                                    Wierzę, że każdy człowiek ma w sobie potencjał do zmiany, potrzebuje tylko
-                                    odpowiednich warunków, by go uwolnić.
+                                    Fundamentem mojej pracy jest perspektywa i świat klienta. Odchodzę od ocen w
+                                    kierunku zrozumienia, akceptacji i budowania relacji terapeutycznej.
                                 </p>
                             </div>
 
@@ -418,7 +438,8 @@
                                         <p class="text-sm text-gray-600 leading-relaxed max-w-2xl">
                                             Dbałość o najwyższą jakość pomocy to mój priorytet. Moja praca podlega
                                             stałej superwizji u certyfikowanych specjalistów. Pracuję w oparciu o kodeks
-                                            etyczno-zawodowy, gwarantując pełną dyskrecję i profesjonalizm.
+                                            etyczno-zawodowy, gwarantując pełną dyskrecję i profesjonalizm. Uczestniczę
+                                            w superwizji 2 razy w miesiącu u dwóch różnych specjalistów.
                                         </p>
                                     </div>
                                 </div>
@@ -486,7 +507,7 @@
                                 <!-- Price Badge -->
                                 <div
                                     class="absolute top-6 right-6 bg-[#C4875A] text-white rounded-2xl px-4 py-2 text-center shadow-md">
-                                    <div class="text-xl font-bold leading-none">180 zł</div>
+                                    <div class="text-xl font-bold leading-none">200 zł</div>
                                     <div class="text-xs opacity-80 mt-0.5">/ sesja 50 min</div>
                                 </div>
                             </div>
@@ -518,6 +539,11 @@
                                         <iconify-icon icon="solar:check-circle-bold"
                                             class="text-[#7A9E7E] text-lg shrink-0 mt-0.5"></iconify-icon>
                                         Trudności w radzeniu sobie ze zmianą i stratą
+                                    </li>
+                                    <li class="flex items-start gap-3 text-sm text-gray-700">
+                                        <iconify-icon icon="solar:check-circle-bold"
+                                            class="text-[#7A9E7E] text-lg shrink-0 mt-0.5"></iconify-icon>
+                                        Żałoba i strata
                                     </li>
                                 </ul>
                                 <div
@@ -561,9 +587,8 @@
                                         class="faq-icon text-gray-400 text-lg shrink-0 transition-transform"></iconify-icon>
                                 </button>
                                 <div class="faq-answer hidden px-6 pb-5 text-sm text-gray-600 leading-relaxed">
-                                    Pierwsza sesja to przede wszystkim rozmowa — możliwość opowiedzenia, z czym
-                                    przychodzisz i czego oczekujesz. Nie ma pytań bez odpowiedzi ani oceny. Razem
-                                    ustalimy, jak mogę Ci najlepiej pomóc.
+                                    Poznasz mnie i zasady które obowiązują w moim gabinecie. Zapytam; "Z nadzieją na
+                                    jaką zmianę przychodzisz?" Ustalimy cel terapeutyczny. Podpiszemy kontrakt.
                                 </div>
                             </div>
 
@@ -591,9 +616,9 @@
                                         class="faq-icon text-gray-400 text-lg shrink-0 transition-transform"></iconify-icon>
                                 </button>
                                 <div class="faq-answer hidden px-6 pb-5 text-sm text-gray-600 leading-relaxed">
-                                    To zależy od indywidualnej sytuacji. Metoda TSR, którą stosuję, jest skoncentrowana
-                                    na rozwiązaniach i często przynosi efekty już po kilku spotkaniach. Wszystko
-                                    ustalamy wspólnie, bez z góry narzuconego harmonogramu.
+                                    Zgodnie z podejściem TSR zakładam że nasze pierwsze spotkanie może być ostanie i
+                                    wystarczające. Z doświadczenia widzę że klienci potrzebują w zależności od sytuacji
+                                    od 6 do 12 spotkań.
                                 </div>
                             </div>
 
@@ -624,8 +649,8 @@
                                     <p class="text-gray-600 text-sm">Odbuduj porozumienie i bliskość we związku.</p>
                                     <div
                                         class="absolute top-6 right-6 bg-[#7A9E7E] text-white rounded-2xl px-4 py-2 text-center shadow-md">
-                                        <div class="text-xl font-bold leading-none">220 zł</div>
-                                        <div class="text-xs opacity-80 mt-0.5">/ sesja 80 min</div>
+                                        <div class="text-xl font-bold leading-none">300 zł</div>
+                                        <div class="text-xs opacity-80 mt-0.5">/ sesja 70 - 90 min</div>
                                     </div>
                                 </div>
                                 <div class="px-8 py-6">
@@ -651,6 +676,16 @@
                                             <iconify-icon icon="solar:check-circle-bold"
                                                 class="text-[#7A9E7E] text-lg shrink-0 mt-0.5"></iconify-icon>
                                             Różnice w potrzebach i wartościach
+                                        </li>
+                                        <li class="flex items-start gap-3 text-sm text-gray-700">
+                                            <iconify-icon icon="solar:check-circle-bold"
+                                                class="text-[#7A9E7E] text-lg shrink-0 mt-0.5"></iconify-icon>
+                                            Trudności związane ze sferą seksualną
+                                        </li>
+                                        <li class="flex items-start gap-3 text-sm text-gray-700">
+                                            <iconify-icon icon="solar:check-circle-bold"
+                                                class="text-[#7A9E7E] text-lg shrink-0 mt-0.5"></iconify-icon>
+                                            Wsparcie w procesie leczenia nieplodnosci
                                         </li>
                                     </ul>
                                 </div>
@@ -783,8 +818,7 @@
                             <div class="bg-gradient-to-br from-[#4A6FA5]/10 to-[#4A6FA5]/5 px-8 pt-8 pb-6 relative">
                                 <iconify-icon icon="solar:diploma-linear" stroke-width="1.5"
                                     class="text-3xl text-[#4A6FA5] mb-4 block"></iconify-icon>
-                                <h3 class="font-serif text-2xl text-gray-900 tracking-tight mb-1">Superwizja i
-                                    konsultacje</h3>
+                                <h3 class="font-serif text-2xl text-gray-900 tracking-tight mb-1">Konsultacje</h3>
                                 <p class="text-gray-600 text-sm">Dla pedagogów, psychologów, nauczycieli i pracowników
                                     socjalnych.</p>
                                 <div
@@ -811,11 +845,6 @@
                                         <iconify-icon icon="solar:check-circle-bold"
                                             class="text-[#4A6FA5] text-lg shrink-0 mt-0.5"></iconify-icon>
                                         Prewencja wypalenia zawodowego
-                                    </li>
-                                    <li class="flex items-start gap-3 text-sm text-gray-700">
-                                        <iconify-icon icon="solar:check-circle-bold"
-                                            class="text-[#4A6FA5] text-lg shrink-0 mt-0.5"></iconify-icon>
-                                        Wsparcie przy diagnozowaniu uczniów / podopiecznych
                                     </li>
                                     <li class="flex items-start gap-3 text-sm text-gray-700">
                                         <iconify-icon icon="solar:check-circle-bold"
@@ -910,11 +939,15 @@
 
                 <!-- CTA Do pełnej oferty -->
                 <div class="mt-16 text-center">
-                    <h3 class="font-serif text-2xl text-gray-900 tracking-tight mb-4">Chcesz poznać więcej szczegółów?</h3>
-                    <p class="text-gray-600 mb-8 max-w-xl mx-auto">Przejdź do szczegółowej oferty, gdzie opisuję każdy z rodzajów wsparcia, przykładowe trudności oraz dokładny przebieg sesji.</p>
-                    <a href="oferta.html" class="inline-flex items-center gap-2 bg-[#7A9E7E] text-white px-8 py-4 rounded-full font-medium transition-transform hover:scale-[1.02] hover:shadow-lg hover:shadow-[#7A9E7E]/20 group">
+                    <h3 class="font-serif text-2xl text-gray-900 tracking-tight mb-4">Chcesz poznać więcej szczegółów?
+                    </h3>
+                    <p class="text-gray-600 mb-8 max-w-xl mx-auto">Przejdź do szczegółowej oferty, gdzie opisuję każdy z
+                        rodzajów wsparcia, przykładowe trudności oraz dokładny przebieg sesji.</p>
+                    <a href="oferta.html"
+                        class="inline-flex items-center gap-2 bg-[#7A9E7E] text-white px-8 py-4 rounded-full font-medium transition-transform hover:scale-[1.02] hover:shadow-lg hover:shadow-[#7A9E7E]/20 group">
                         Zobacz pełną ofertę
-                        <iconify-icon icon="solar:arrow-right-linear" stroke-width="1.5" class="text-xl group-hover:translate-x-1 transition-transform"></iconify-icon>
+                        <iconify-icon icon="solar:arrow-right-linear" stroke-width="1.5"
+                            class="text-xl group-hover:translate-x-1 transition-transform"></iconify-icon>
                     </a>
                 </div>
 

@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Standardy Ochrony Małoletnich · Konsultacje Rodzinne Gdańsk</title>
+    <meta name="description" content="Standardy Ochrony Małoletnich obowiązujące w Gabinecie Konsultacji Rodzinnych w Gdańsku. Dokumentacja zgodna z wymogami prawnymi.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+        body { font-family: 'DM Sans', sans-serif; }
+        .font-serif { font-family: 'Playfair Display', serif; }
+
+        /* PDF embed responsiveness */
+        .pdf-container {
+            position: relative;
+            width: 100%;
+            height: 80vh;
+            min-height: 500px;
+            border-radius: 1.5rem;
+            overflow: hidden;
+            box-shadow: 0 8px 40px rgba(0,0,0,0.06);
+            border: 1px solid #e5e7eb;
+            background: #f9fafb;
+        }
+        .pdf-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /* Fallback card for browsers that don't show PDF inline */
+        .pdf-fallback {
+            display: none;
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-800 antialiased selection:bg-[#7A9E7E]/20 selection:text-[#7A9E7E] flex flex-col min-h-screen">
+
+    <!-- Navigation -->
+    <header class="w-full sticky top-0 z-50 bg-[#F7F3EE]/90 backdrop-blur-md py-4 px-6 lg:px-12 border-b border-[#7A9E7E]/10 shadow-[0_4px_30px_rgb(0,0,0,0.03)] transition-all duration-300">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <a href="index.html" class="flex items-center transition-transform hover:scale-105">
+                <img src="logo.svg" alt="Konsultacje Rodzinne Gdańsk" class="h-16 w-auto object-contain">
+            </a>
+            <nav class="hidden md:flex gap-8 items-center text-sm font-medium text-gray-600">
+                <a href="index.html#o-mnie" class="hover:text-[#7A9E7E] transition-colors">O mnie</a>
+                <div class="relative" id="nav-oferta">
+                    <button class="flex items-center gap-1 hover:text-[#7A9E7E] transition-colors focus:outline-none"
+                        aria-expanded="false" aria-controls="mega-menu" onclick="toggleMegaMenu()">
+                        Oferta
+                        <iconify-icon icon="solar:alt-arrow-down-linear" stroke-width="2"
+                            class="text-sm transition-transform duration-200" id="mega-caret"></iconify-icon>
+                    </button>
+                    <div id="mega-menu"
+                        class="absolute top-full right-[-40px] mt-4 w-[560px] lg:w-[640px] bg-white/95 backdrop-blur-md rounded-3xl shadow-[0_20px_60px_rgb(0,0,0,0.1)] border border-gray-100 p-6 hidden z-50">
+                        <div class="absolute -top-2 right-[60px] w-4 h-4 bg-white rotate-45 border-l border-t border-gray-100 rounded-sm"></div>
+                        <p class="text-xs font-semibold text-gray-400 uppercase tracking-widest mb-4">Wybierz formę wsparcia</p>
+                        <div class="grid grid-cols-2 gap-3 mb-4">
+                            <a href="terapia-indywidualna.html" class="group flex items-start gap-4 p-4 rounded-2xl hover:bg-[#F7F3EE] transition-colors">
+                                <div class="w-10 h-10 rounded-xl bg-[#7A9E7E]/10 flex items-center justify-center text-[#7A9E7E] shrink-0 group-hover:bg-[#7A9E7E]/20 transition-colors">
+                                    <iconify-icon icon="solar:user-linear" stroke-width="1.5" class="text-xl"></iconify-icon>
+                                </div>
+                                <div>
+                                    <div class="font-semibold text-gray-800 text-sm">Terapia Indywidualna</div>
+                                    <div class="text-xs text-gray-500 mt-0.5">Dla dorosłych &middot; do 50 min &middot; 200 zł</div>
+                                </div>
+                            </a>
+                            <a href="terapia-par.html" class="group flex items-start gap-4 p-4 rounded-2xl hover:bg-[#F7F3EE] transition-colors">
+                                <div class="w-10 h-10 rounded-xl bg-[#7A9E7E]/10 flex items-center justify-center text-[#7A9E7E] shrink-0 group-hover:bg-[#7A9E7E]/20 transition-colors">
+                                    <iconify-icon icon="solar:hand-shake-linear" stroke-width="1.5" class="text-xl"></iconify-icon>
+                                </div>
+                                <div>
+                                    <div class="font-semibold text-gray-800 text-sm">Terapia Par</div>
+                                    <div class="text-xs text-gray-500 mt-0.5">Małżeństwa &middot; 70-90 min &middot; 300 zł</div>
+                                </div>
+                            </a>
+                            <a href="wsparcie-rodzin.html" class="group flex items-start gap-4 p-4 rounded-2xl hover:bg-[#F7F3EE] transition-colors">
+                                <div class="w-10 h-10 rounded-xl bg-[#7A9E7E]/10 flex items-center justify-center text-[#7A9E7E] shrink-0 group-hover:bg-[#7A9E7E]/20 transition-colors">
+                                    <iconify-icon icon="solar:users-group-two-rounded-linear" stroke-width="1.5" class="text-xl"></iconify-icon>
+                                </div>
+                                <div>
+                                    <div class="font-semibold text-gray-800 text-sm">Wsparcie dla Rodzin</div>
+                                    <div class="text-xs text-gray-500 mt-0.5">Rodziny &middot; 70-90 min &middot; 300 zł</div>
+                                </div>
+                            </a>
+                            <a href="terapia-mlodziezy.html" class="group flex items-start gap-4 p-4 rounded-2xl hover:bg-[#F7F3EE] transition-colors">
+                                <div class="w-10 h-10 rounded-xl bg-[#7A9E7E]/10 flex items-center justify-center text-[#7A9E7E] shrink-0 group-hover:bg-[#7A9E7E]/20 transition-colors">
+                                    <iconify-icon icon="solar:backpack-linear" stroke-width="1.5" class="text-xl"></iconify-icon>
+                                </div>
+                                <div>
+                                    <div class="font-semibold text-gray-800 text-sm">Terapia Młodzieży</div>
+                                    <div class="text-xs text-gray-500 mt-0.5">15+ lat &middot; 50 min</div>
+                                </div>
+                            </a>
+                            <a href="szkolenia.html" class="col-span-2 group flex items-start gap-4 p-4 rounded-2xl hover:bg-[#F7F3EE] transition-colors">
+                                <div class="w-10 h-10 rounded-xl bg-[#7A9E7E]/10 flex items-center justify-center text-[#7A9E7E] shrink-0 group-hover:bg-[#7A9E7E]/20 transition-colors">
+                                    <iconify-icon icon="solar:diploma-linear" stroke-width="1.5" class="text-xl"></iconify-icon>
+                                </div>
+                                <div>
+                                    <div class="font-semibold text-gray-800 text-sm">Szkolenia i Warsztaty</div>
+                                    <div class="text-xs text-gray-500 mt-0.5">Dla instytucji i placówek</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="border-t border-gray-100 pt-4">
+                            <a href="oferta.html" class="inline-flex items-center gap-1.5 text-xs font-semibold text-[#7A9E7E] hover:text-[#5d8063] transition-colors">
+                                Zobacz całą ofertę
+                                <iconify-icon icon="solar:arrow-right-linear" stroke-width="2"></iconify-icon>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <a href="artykuly.html" class="hover:text-[#7A9E7E] transition-colors">Artykuły</a>
+                <a href="kontakt.html" class="hover:text-[#7A9E7E] transition-colors">Kontakt</a>
+            </nav>
+            <button class="md:hidden flex items-center" onclick="toggleMobileMenu()">
+                <iconify-icon icon="solar:hamburger-menu-linear" stroke-width="1.5" class="text-2xl text-gray-800"></iconify-icon>
+            </button>
+        </div>
+        <!-- Mobile Nav -->
+        <div id="mobile-menu" class="hidden md:hidden mt-4 border-t border-gray-200/60 pt-4 space-y-2 text-sm font-medium text-gray-700">
+            <a href="index.html#o-mnie" class="block px-3 py-2 rounded-xl hover:bg-[#F7F3EE]">O mnie</a>
+            <div>
+                <button class="flex w-full items-center justify-between px-3 py-2 rounded-xl hover:bg-[#F7F3EE]" onclick="toggleMobileOferta()">
+                    <span>Oferta</span>
+                    <iconify-icon icon="solar:alt-arrow-down-linear" stroke-width="2" id="mobile-oferta-caret" class="transition-transform duration-200"></iconify-icon>
+                </button>
+                <div id="mobile-oferta-panel" class="hidden pl-4 space-y-1 mt-1">
+                    <a href="terapia-indywidualna.html" class="flex items-center gap-3 px-3 py-2 rounded-xl hover:bg-[#F7F3EE] text-gray-600">
+                        <iconify-icon icon="solar:user-linear" class="text-[#7A9E7E] text-lg"></iconify-icon>Terapia Indywidualna</a>
+                    <a href="terapia-par.html" class="flex items-center gap-3 px-3 py-2 rounded-xl hover:bg-[#F7F3EE] text-gray-600">
+                        <iconify-icon icon="solar:hand-shake-linear" class="text-[#7A9E7E] text-lg"></iconify-icon>Terapia Par</a>
+                    <a href="wsparcie-rodzin.html" class="flex items-center gap-3 px-3 py-2 rounded-xl hover:bg-[#F7F3EE] text-gray-600">
+                        <iconify-icon icon="solar:users-group-two-rounded-linear" class="text-[#7A9E7E] text-lg"></iconify-icon>Wsparcie dla Rodzin</a>
+                    <a href="terapia-mlodziezy.html" class="flex items-center gap-3 px-3 py-2 rounded-xl hover:bg-[#F7F3EE] text-gray-600">
+                        <iconify-icon icon="solar:backpack-linear" class="text-[#7A9E7E] text-lg"></iconify-icon>Terapia Młodzieży</a>
+                    <a href="szkolenia.html" class="flex items-center gap-3 px-3 py-2 rounded-xl hover:bg-[#F7F3EE] text-gray-600">
+                        <iconify-icon icon="solar:diploma-linear" class="text-[#7A9E7E] text-lg"></iconify-icon>Szkolenia i Warsztaty</a>
+                    <a href="oferta.html" class="flex items-center gap-2 px-3 py-2 text-xs text-[#7A9E7E] font-semibold">Cała oferta →</a>
+                </div>
+            </div>
+            <a href="artykuly.html" class="block px-3 py-2 rounded-xl hover:bg-[#F7F3EE]">Artykuły</a>
+            <a href="kontakt.html" class="block px-3 py-2 rounded-xl hover:bg-[#F7F3EE]">Kontakt</a>
+        </div>
+    </header>
+
+    <script>
+        function toggleMegaMenu() {
+            const menu = document.getElementById('mega-menu');
+            const caret = document.getElementById('mega-caret');
+            const isOpen = !menu.classList.contains('hidden');
+            menu.classList.toggle('hidden');
+            caret.classList.toggle('rotate-180', !isOpen);
+        }
+        document.addEventListener('click', function(e) {
+            const wrap = document.getElementById('nav-oferta');
+            if (wrap && !wrap.contains(e.target)) {
+                const menu = document.getElementById('mega-menu');
+                if (menu) menu.classList.add('hidden');
+                const caret = document.getElementById('mega-caret');
+                if (caret) caret.classList.remove('rotate-180');
+            }
+        });
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                const menu = document.getElementById('mega-menu');
+                if (menu) menu.classList.add('hidden');
+            }
+        });
+        function toggleMobileMenu() { document.getElementById('mobile-menu').classList.toggle('hidden'); }
+        function toggleMobileOferta() {
+            document.getElementById('mobile-oferta-panel').classList.toggle('hidden');
+            document.getElementById('mobile-oferta-caret').classList.toggle('rotate-180');
+        }
+    </script>
+
+    <main class="flex-grow">
+
+        <!-- Hero -->
+        <section class="bg-[#F7F3EE] pt-16 pb-12 px-6 lg:px-12">
+            <div class="max-w-4xl mx-auto">
+                <a href="index.html" class="inline-flex items-center gap-1.5 text-xs text-gray-500 hover:text-[#7A9E7E] transition-colors mb-8">
+                    <iconify-icon icon="solar:arrow-left-linear" stroke-width="1.5"></iconify-icon> Strona główna
+                </a>
+                <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-[#7A9E7E]/20 text-[#7A9E7E] text-xs font-semibold mb-6">
+                    <iconify-icon icon="solar:shield-check-linear" stroke-width="1.5"></iconify-icon>
+                    <span>Dokumenty prawne</span>
+                </div>
+                <h1 class="font-serif text-4xl md:text-5xl lg:text-6xl text-gray-900 tracking-tight leading-[1.15] mb-6">
+                    Standardy Ochrony<br><span class="text-[#7A9E7E] italic font-normal">Małoletnich</span>
+                </h1>
+                <p class="text-lg md:text-xl text-gray-600 mb-10 max-w-2xl leading-relaxed">
+                    Poniżej znajduje się dokument opisujący standardy ochrony małoletnich obowiązujące w gabinecie.
+                    Zapraszam do zapoznania się z jego treścią. Dokument można również pobrać na swoje urządzenie.
+                </p>
+
+                <!-- Action buttons -->
+                <div class="flex flex-col sm:flex-row gap-3">
+                    <a href="Standardy-Ochrony-Maloletnich.pdf" download
+                        id="btn-download"
+                        class="inline-flex items-center justify-center gap-2 bg-[#7A9E7E] text-white px-7 py-3.5 rounded-full text-sm font-medium transition-transform hover:scale-[1.02] hover:shadow-lg hover:shadow-[#7A9E7E]/20 active:scale-[0.98]">
+                        <iconify-icon icon="solar:download-linear" stroke-width="1.5" class="text-lg"></iconify-icon>
+                        Pobierz PDF
+                    </a>
+                    <a href="Standardy-Ochrony-Maloletnich.pdf" target="_blank" rel="noopener"
+                        id="btn-open"
+                        class="inline-flex items-center justify-center gap-2 bg-white border border-gray-200 text-gray-700 px-7 py-3.5 rounded-full text-sm font-medium transition-all hover:bg-gray-50 hover:border-gray-300">
+                        <iconify-icon icon="solar:eye-linear" stroke-width="1.5" class="text-lg"></iconify-icon>
+                        Otwórz w nowej karcie
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- PDF Viewer -->
+        <section class="bg-white py-12 px-6 lg:px-12">
+            <div class="max-w-5xl mx-auto">
+
+                <!-- Info bar -->
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-xl bg-red-50 flex items-center justify-center shrink-0">
+                            <iconify-icon icon="solar:file-text-bold" class="text-red-400 text-xl"></iconify-icon>
+                        </div>
+                        <div>
+                            <div class="text-sm font-semibold text-gray-800">Standardy-Ochrony-Maloletnich.pdf</div>
+                            <div class="text-xs text-gray-500">Dokument PDF</div>
+                        </div>
+                    </div>
+                    <a href="Standardy-Ochrony-Maloletnich.pdf" download
+                        class="inline-flex items-center gap-2 text-xs font-semibold text-[#7A9E7E] hover:text-[#5d8063] transition-colors">
+                        <iconify-icon icon="solar:download-linear" stroke-width="2"></iconify-icon>
+                        Pobierz
+                    </a>
+                </div>
+
+                <!-- Embedded PDF -->
+                <div class="pdf-container">
+                    <iframe
+                        src="Standardy-Ochrony-Maloletnich.pdf"
+                        title="Standardy Ochrony Małoletnich"
+                        aria-label="Podgląd dokumentu Standardy Ochrony Małoletnich">
+                    </iframe>
+                </div>
+
+                <!-- Fallback for mobile/unsupported browsers -->
+                <div class="mt-6 p-6 bg-[#F7F3EE] rounded-2xl border border-[#7A9E7E]/10">
+                    <div class="flex items-start gap-4">
+                        <div class="w-10 h-10 rounded-xl bg-[#7A9E7E]/10 flex items-center justify-center text-[#7A9E7E] shrink-0">
+                            <iconify-icon icon="solar:info-circle-linear" stroke-width="1.5" class="text-xl"></iconify-icon>
+                        </div>
+                        <div>
+                            <p class="text-sm text-gray-600 leading-relaxed">
+                                Jeśli podgląd dokumentu nie wyświetla się poprawnie (np. na urządzeniach mobilnych),
+                                możesz <a href="Standardy-Ochrony-Maloletnich.pdf" download class="text-[#7A9E7E] font-semibold hover:underline underline-offset-2">pobrać plik PDF</a>
+                                lub <a href="Standardy-Ochrony-Maloletnich.pdf" target="_blank" rel="noopener" class="text-[#7A9E7E] font-semibold hover:underline underline-offset-2">otworzyć go w nowej karcie</a>.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Contact CTA -->
+        <section class="bg-[#F7F3EE] py-16 px-6 lg:px-12 text-center">
+            <div class="max-w-xl mx-auto">
+                <h2 class="font-serif text-2xl md:text-3xl text-gray-900 tracking-tight mb-4">Masz pytania dotyczące dokumentu?</h2>
+                <p class="text-gray-600 mb-8 text-sm md:text-base">Chętnie odpowiem na wszelkie pytania związane ze standardami ochrony małoletnich w moim gabinecie.</p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="kontakt.html"
+                        class="inline-flex justify-center items-center gap-2 bg-[#C4875A] text-white px-8 py-4 rounded-full font-medium hover:scale-[1.02] transition-transform hover:shadow-lg hover:shadow-[#C4875A]/20">
+                        Skontaktuj się
+                        <iconify-icon icon="solar:arrow-right-linear" stroke-width="1.5" class="text-xl"></iconify-icon>
+                    </a>
+                    <a href="tel:+48886847122"
+                        class="inline-flex justify-center items-center gap-2 bg-white border border-gray-200 text-gray-800 px-8 py-4 rounded-full font-medium hover:bg-gray-50 transition-colors">
+                        <iconify-icon icon="solar:phone-linear" stroke-width="1.5" class="text-lg"></iconify-icon>
+                        886-847-122
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-[#F7F3EE] border-t border-gray-100 py-8 px-6 lg:px-12 text-center">
+        <p class="text-xs text-gray-400">© 2025 Gabinet Konsultacji Rodzinnych · Gdańsk &amp; Online</p>
+        <p class="text-xs text-gray-400 mt-2">
+            Wykonanie:
+            <a href="https://www.web-canvas.pl" target="_blank" rel="noopener"
+                class="text-[#7A9E7E] hover:underline underline-offset-2">www.web-canvas.pl</a>
+        </p>
+        <a href="index.html" class="mt-2 inline-flex items-center gap-1.5 text-xs text-[#7A9E7E] hover:underline underline-offset-2">
+            <iconify-icon icon="solar:arrow-left-linear" stroke-width="1.5"></iconify-icon> Strona główna
+        </a>
+    </footer>
+
+</body>
+</html>
